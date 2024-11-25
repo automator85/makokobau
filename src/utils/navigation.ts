@@ -1,38 +1,39 @@
 // An array of links for navigation bar
 const navBarLinks = [
-  { name: "Home", url: "/" },
-  { name: "Products", url: "/products" },
-  { name: "Services", url: "/services" },
-  { name: "Blog", url: "/blog" },
-  { name: "Contact", url: "/contact" },
+  { name: "Startseite", url: "/makokobau/" },
+  { name: "Leistungen", url: "/makokobau/services" },
+  { name: "Referenzen", url: "/makokobau/blog" },
+  { name: "Kontakt", url: "/makokobau/contact" },
 ];
+
 // An array of links for footer
 const footerLinks = [
   {
-    section: "Ecosystem",
+    section: "Leistungen",
     links: [
-      { name: "Documentation", url: "/welcome-to-docs/" },
-      { name: "Tools & Equipment", url: "/products" },
-      { name: "Construction Services", url: "/services" },
+      { name: "Holz- und Bautenschutz", url: "/makokobau/services#holzschutz" },
+      { name: "Flachdachsanierung", url: "/makokobau/services#flachdach" },
+      { name: "Abrissarbeiten", url: "/makokobau/services#abriss" },
     ],
   },
   {
-    section: "Company",
+    section: "Unternehmen",
     links: [
-      { name: "About us", url: "#" },
-      { name: "Blog", url: "/blog" },
-      { name: "Careers", url: "#" },
-      { name: "Customers", url: "#" },
+      { name: "Über uns", url: "/makokobau/#" },
+      { name: "Referenzen", url: "/makokobau/blog" },
+      { name: "Karriere", url: "/makokobau/#" },
+      { name: "Kontakt", url: "/makokobau/contact" },
     ],
   },
 ];
+
 // An object of links for social icons
 const socialLinks = {
   facebook: "https://www.facebook.com/",
   x: "https://twitter.com/",
-  github: "https://github.com/mearashadowfax/ScrewFast",
+  github: "#",
   google: "https://www.google.com/",
-  slack: "https://slack.com/",
+  slack: "#",
 };
 
 export default {

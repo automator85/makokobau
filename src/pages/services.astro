@@ -1,6 +1,6 @@
 ---
 // Import necessary components
-import MainLayout from "@/layouts/MainLayout.astro";
+import MainLayout from "../layouts/MainLayout.astro";
 import MainSection from "@components/ui/blocks/MainSection.astro";
 import LeftSection from "@components/ui/blocks/LeftSection.astro";
 import RightSection from "@components/ui/blocks/RightSection.astro";
@@ -36,63 +36,62 @@ interface Article {
 const articles: Article[] = [
   {
     isRightSection: true,
-    title: "Delivering Expert Guidance",
+    title: "Holz- und Bautenschutz",
     subTitle:
-      "Embarking on a construction project can be overwhelming. With our professional consultation services, we guide you through every stage, ensuring you make informed decisions. Whether you are a DIY enthusiast or a skilled contractor, our experts are on hand to offer tailored advice on product selection, project scope, and compliance with local regulations.",
+      "Wir bieten professionelle Holz- und Bautenschutzarbeiten für langfristige Haltbarkeit und Sicherheit Ihrer Immobilie. Unsere Experten verwenden modernste Techniken und hochwertige Materialien, um optimalen Schutz zu gewährleisten. Von der Diagnose bis zur Ausführung garantieren wir fachgerechte Arbeit nach höchsten Standards.",
     single: false,
     imgOne: blueprints,
-    imgOneAlt: "Blueprints and digital tablet with construction plans.",
+    imgOneAlt: "Detaillierte Planung von Holzschutzarbeiten",
     imgTwo: personWorking,
-    imgTwoAlt: "Person working in the office",
+    imgTwoAlt: "Professionelle Ausführung von Bautenschutzarbeiten",
   },
   {
     isRightSection: false,
-    title: "Transforming Designs into Reality",
+    title: "Flachdachsanierung",
     subTitle:
-      "Our skilled craftsmen bring precision and excellence to every construction project. From minor installations to substantial structural work, ScrewFast offers reliable construction services to turn your plans into tangible outcomes. We ensure the highest standards of safety and workmanship, utilizing top-quality tools and materials from our extensive inventory.",
+      "Unsere Flachdachsanierung garantiert zuverlässige Abdichtung und optimalen Schutz vor Witterungseinflüssen. Mit jahrelanger Erfahrung und modernster Technik führen wir Sanierungen effizient und nachhaltig durch. Wir analysieren den Zustand Ihres Daches gründlich und entwickeln maßgeschneiderte Sanierungslösungen.",
     img: beforeAfter,
-    imgAlt: "Construction site before and after",
+    imgAlt: "Vorher-Nachher Vergleich einer Flachdachsanierung",
     btnExists: true,
-    btnTitle: "Learn More",
-    btnURL: "#",
+    btnTitle: "Mehr erfahren",
+    btnURL: "#flachdach",
   },
   {
     isRightSection: true,
-    title: "Navigating Projects with Professional Oversight",
+    title: "Professionelle Abrissarbeiten",
     subTitle:
-      "Effective project management is at the heart of any successful build. ScrewFast provides thorough planning and robust management services that keep your project on time and within budget. Let us handle the complexities of workflow coordination, resource allocation, and stakeholder communication while you focus on your vision.",
+      "Bei Abrissarbeiten setzen wir auf sichere und effiziente Durchführung. Unser erfahrenes Team garantiert einen reibungslosen Ablauf unter Einhaltung aller Sicherheits- und Umweltvorschriften. Von der Planung bis zur Entsorgung - wir kümmern uns um alle Aspekte Ihres Abrissprojekts.",
     single: false,
     imgOne: constructionWorkers,
-    imgOneAlt: "Construction workers orchestrating a project",
+    imgOneAlt: "Professionelle Durchführung von Abrissarbeiten",
     imgTwo: aerialView,
-    imgTwoAlt: "Aerial view of managed construction",
+    imgTwoAlt: "Übersicht einer Abrissbaustelle",
   },
   {
     isRightSection: false,
-    title: "Ensuring Long-lasting Performance",
+    title: "Umfassende Beratung",
     subTitle:
-      "Our commitment to your project doesn't end at completion. ScrewFast offers ongoing maintenance and support services to ensure your construction's longevity and performance. From regular check-ups to emergency assistance, our responsive team is there to provide seamless support.",
+      "Wir bieten eine ausführliche Beratung zu allen unseren Leistungen. Unsere Experten analysieren Ihre spezifischen Anforderungen und entwickeln passende Lösungsvorschläge. Von der ersten Begutachtung bis zum Abschluss der Arbeiten stehen wir Ihnen mit Rat und Tat zur Seite.",
     img: usingTools,
-    imgAlt:
-      "Man in orange and black vest wearing white helmet holding yellow and black power tool",
+    imgAlt: "Fachkundige Beratung vor Ort",
   },
   {
     isRightSection: true,
-    title: "Crafting Bespoke Strategies for Unique Challenges",
+    title: "Qualitätssicherung",
     subTitle:
-      "For our larger enterprise clients, ScrewFast offers custom solutions designed to meet specific industry challenges. By understanding your unique needs, we engineer tailored strategies aimed at optimizing your operations, enhancing efficiency, and driving your business forward.",
+      "Qualität steht bei uns an erster Stelle. Durch regelmäßige Kontrollen und dokumentierte Abnahmen gewährleisten wir höchste Standards bei allen unseren Arbeiten. Wir verwenden ausschließlich hochwertige Materialien und arbeiten mit modernster Technik.",
     single: false,
     imgOne: progressBuilding,
-    imgOneAlt: "In progress building structure",
+    imgOneAlt: "Qualitätskontrolle während der Arbeiten",
     imgTwo: underConstruction,
-    imgTwoAlt: "Brown and gray building under construction",
+    imgTwoAlt: "Dokumentation der Qualitätssicherung",
     btnExists: true,
-    btnTitle: "Read more",
-    btnURL: "#",
+    btnTitle: "Mehr Details",
+    btnURL: "#qualitaet",
   },
 ];
 
-const pageTitle: string = `Services | ${SITE.title}`;
+const pageTitle: string = `Leistungen | ${SITE.title}`;
 ---
 
 <MainLayout
@@ -100,35 +99,27 @@ const pageTitle: string = `Services | ${SITE.title}`;
   structuredData={{
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://screwfast.uk/services",
-    "url": "https://screwfast.uk/services",
-    "name": "Expert Consultation Services | ScrewFast",
-    "description": "Uniting expertise with your vision, ScrewFast provides exceptional service and comprehensive solutions in the hardware and construction industry, from consultation to project completion.",
+    "@id": "https://makoko-bau.de/services",
+    "url": "https://makoko-bau.de/services",
+    "name": "Professionelle Baudienstleistungen | MaKoKo Bau",
+    "description": "MaKoKo Bau bietet professionelle Holz- und Bautenschutzarbeiten, Flachdachsanierung und Abrissarbeiten. Qualität und Zuverlässigkeit für Ihre Bauprojekte.",
     "isPartOf": {
         "@type": "WebSite",
-        "url": "https://screwfast.uk",
-        "name": "ScrewFast",
-        "description": "ScrewFast offers top-tier hardware tools and expert construction services to meet all your project needs."
+        "url": "https://makoko-bau.de",
+        "name": "MaKoKo Bau",
+        "description": "Ihr zuverlässiger Partner für Holz- und Bautenschutz, Flachdachsanierung und professionelle Abrissarbeiten."
     },
-    "inLanguage": "en-US"
+    "inLanguage": "de-DE"
   }}
 >
-  <!--MainSection is the introductory section of the page, it also contains a CTA button-->
   <MainSection
-    title="Uniting Expertise with Your Vision"
-    subTitle="At ScrewFast, we take pride in providing comprehensive solutions and exceptional service in the hardware and construction industry. Our experienced team is dedicated to supporting your project from inception to completion with a range of specialized services."
+    title="Unsere Leistungen im Überblick"
+    subTitle="MaKoKo Bau steht für professionelle Ausführung und höchste Qualität in allen Bereichen. Von Holz- und Bautenschutz über Flachdachsanierung bis hin zu Abrissarbeiten - wir sind Ihr kompetenter Partner für alle Bauvorhaben."
     btnExists={true}
-    btnTitle="Schedule a Consultation"
-    btnURL="#"
+    btnTitle="Jetzt Beratungstermin vereinbaren"
+    btnURL="/contact"
   />
-  <!-- RightSection and LeftSection contain details about various services along with pertinent imagery.
-  They alternate for variety in design.
-  The 'btnExists' property is used to toggle the display of a button in these sections.
-  When btnExists={true}, a button is displayed.
-  This can be used to link to more detailed information or related resources.
-  RightSection can also conditionally render one or two images based on the 'single' property.
-  If 'single' is true, it displays one image, otherwise it displays two.
-  -->
+
   {
     articles.map(article => {
       return article.isRightSection ? (
@@ -157,24 +148,24 @@ const pageTitle: string = `Services | ${SITE.title}`;
       );
     })
   }
-  <!--FeaturesStats section showcases essential stats valuable to users-->
+
   <FeaturesStats
-    title="By the Numbers"
-    subTitle="Our commitment to quality and reliability is evident in every project we undertake. At ScrewFast, we are dedicated to delivering industry-leading services that ensure your construction projects are built to last."
-    mainStatTitle="96%"
-    mainStatSubTitle="of our clients rate their experience with ScrewFast as exceptional"
+    title="Unsere Erfolge in Zahlen"
+    subTitle="Bei MaKoKo Bau steht Qualität und Kundenzufriedenheit an erster Stelle. Unsere Zahlen sprechen für sich und zeigen unseren Erfolg in der Branche."
+    mainStatTitle="98%"
+    mainStatSubTitle="unserer Kunden sind mit unserer Arbeit sehr zufrieden"
     stats={[
       {
-        stat: "99.8%",
-        description: "project completion rate",
+        stat: "15+",
+        description: "Jahre Erfahrung",
       },
       {
-        stat: "5,000+",
-        description: "successful installations",
+        stat: "500+",
+        description: "erfolgreiche Projekte",
       },
       {
-        stat: "85%",
-        description: "client growth year-over-year",
+        stat: "100%",
+        description: "Qualitätsgarantie",
       },
     ]}
   />

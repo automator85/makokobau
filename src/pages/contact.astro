@@ -1,31 +1,30 @@
 ---
 // Import the necessary components
-import MainLayout from "@/layouts/MainLayout.astro";
+import MainLayout from "../layouts/MainLayout.astro";
 import ContactSection from "@components/sections/misc/ContactSection.astro";
 import { SITE } from "@data/constants";
 
-const pageTitle: string = `Contact | ${SITE.title}`;
+const pageTitle: string = `Kontakt | ${SITE.title}`;
 ---
 
-<!--Utilizing MainLayout for the outer layout of the page, and defining meta for SEO purposes-->
 <MainLayout
   title={pageTitle}
   structuredData={{
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://screwfast.uk/contact",
-    "url": "https://screwfast.uk/contact",
-    "name": "Contact Us | ScrewFast",
+    "@id": "https://makoko-bau.de/contact",
+    "url": "https://makoko-bau.de/contact",
+    "name": "Kontakt | MaKoKo Bau",
     "description":
-      "Have questions or want to discuss a project? Reach out, and let's craft the perfect solution with our tools and services.",
+      "Kontaktieren Sie MaKoKo Bau für professionelle Holz- und Bautenschutzarbeiten, Flachdachsanierung und Abrissarbeiten in Berlin. Wir beraten Sie gerne!",
     "isPartOf": {
       "@type": "WebSite",
-      "url": "https://screwfast.uk",
-      "name": "ScrewFast",
+      "url": "https://makoko-bau.de",
+      "name": "MaKoKo Bau",
       "description":
-        "ScrewFast offers top-tier hardware tools and expert construction services to meet all your project needs.",
+        "Ihr zuverlässiger Partner für Holz- und Bautenschutz, Flachdachsanierung und professionelle Abrissarbeiten in Berlin.",
     },
-    "inLanguage": "en-US"
+    "inLanguage": "de-DE"
   }}
 >
   <ContactSection />

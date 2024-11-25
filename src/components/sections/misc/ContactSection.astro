@@ -9,11 +9,11 @@ import TextAreaInput from "@components/ui/forms/input/TextAreaInput.astro";
 import Icon from "@components/ui/icons/Icon.astro";
 
 // Define the variables that will be used in this component
-const title: string = "Contact us";
+const title: string = "Kontakt";
 const subTitle: string =
-  "Have questions or want to discuss a project? Reach out, and let's craft the perfect solution with our tools and services.";
-const formTitle: string = "Fill in the form below";
-const formSubTitle: string = "We'll get back to you in 1-2 business days.";
+  "Haben Sie Fragen zu unseren Leistungen oder möchten Sie ein Projekt besprechen? Kontaktieren Sie uns - wir beraten Sie gerne!";
+const formTitle: string = "Kontaktformular";
+const formSubTitle: string = "Wir melden uns innerhalb von 1-2 Werktagen bei Ihnen.";
 ---
 
 <!-- Contact Us -->
@@ -37,19 +37,17 @@ const formSubTitle: string = "We'll get back to you in 1-2 business days.";
         >
           {formTitle}
         </h2>
-        <!-- Form for user input with various input fields.-->
-        <!-- Each field utilizes a different input component for the specific type of input (text, email, phone, and textarea)-->
         <form>
           <div class="grid gap-4">
             <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
               <TextInput
                 id="hs-firstname-contacts"
-                label="First Name"
+                label="Vorname"
                 name="hs-firstname-contacts"
               />
               <TextInput
                 id="hs-lastname-contacts"
-                label="Last Name"
+                label="Nachname"
                 name="hs-firstname-contacts"
               />
             </div>
@@ -57,13 +55,13 @@ const formSubTitle: string = "We'll get back to you in 1-2 business days.";
             <PhoneInput id="hs-phone-number" />
             <TextAreaInput
               id="hs-about-contacts"
-              label="Details"
+              label="Ihre Nachricht"
               name="hs-about-contacts"
             />
           </div>
 
           <div class="mt-4 grid">
-            <AuthBtn title="Send Message" />
+            <AuthBtn title="Nachricht senden" />
           </div>
 
           <div class="mt-3 text-center">
@@ -74,42 +72,41 @@ const formSubTitle: string = "We'll get back to you in 1-2 business days.";
         </form>
       </div>
 
-      <!--ContactIconBlocks are used to display different methods of contacting, including visiting office, email, browsing knowledgebase, and FAQ.-->
       <div class="divide-y divide-neutral-300 dark:divide-neutral-700">
         <ContactIconBlock
-          heading="Knowledgebase"
-          content="Browse through all of our knowledgebase articles."
+          heading="Unsere Leistungen"
+          content="Informieren Sie sich über unser umfangreiches Leistungsangebot."
           isLinkVisible={true}
-          linkTitle="Visit guides & tutorials"
-          linkURL="#"
+          linkTitle="Zu den Leistungen"
+          linkURL="/services"
           isArrowVisible={true}
           ><Icon name="question" />
         </ContactIconBlock>
 
         <ContactIconBlock
           heading="FAQ"
-          content="Explore our FAQ for quick, clear answers to common queries."
+          content="Finden Sie schnelle Antworten auf häufig gestellte Fragen."
           isLinkVisible={true}
-          linkTitle="Visit FAQ"
+          linkTitle="Zu den FAQ"
           linkURL="#"
           isArrowVisible={true}
           ><Icon name="chatBubble" />
         </ContactIconBlock>
 
         <ContactIconBlock
-          heading="Visit our office"
-          content="UK ScrewFast"
+          heading="Besuchen Sie uns"
+          content="MaKoKo Bau GmbH"
           isAddressVisible={true}
-          addressContent="72 Union Terrace, E10 4PE London"
+          addressContent="Musterstraße 123, 10999 Berlin"
           ><Icon name="mapPin" />
         </ContactIconBlock>
 
         <ContactIconBlock
-          heading="Contact us by email"
-          content="Prefer the written word? Drop us an email at"
+          heading="E-Mail Kontakt"
+          content="Schreiben Sie uns eine E-Mail an"
           isLinkVisible={true}
-          linkTitle="support@screwfast.uk"
-          linkURL="#"
+          linkTitle="info@makoko-bau.de"
+          linkURL="mailto:info@makoko-bau.de"
           ><Icon name="envelopeOpen" />
         </ContactIconBlock>
       </div>

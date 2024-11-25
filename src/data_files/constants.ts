@@ -1,12 +1,12 @@
 import ogImageSrc from "@images/social.png";
 
 export const SITE = {
-  title: "ScrewFast",
-  tagline: "Top-quality Hardware Tools",
-  description: "ScrewFast offers top-tier hardware tools and expert construction services to meet all your project needs. Start exploring and contact our sales team for superior quality and reliability.",
-  description_short: "ScrewFast offers top-tier hardware tools and expert construction services to meet all your project needs.",
-  url: "https://screwfast.uk",
-  author: "Emil Gulamov",
+  title: "MaKoKo Bau",
+  tagline: "Ihr Experte für Bau und Sanierung",
+  description: "MaKoKo Bau ist Ihr zuverlässiger Partner für Holz- und Bautenschutz, Flachdachsanierung und professionelle Abrissarbeiten. Mit jahrelanger Erfahrung und qualifizierten Mitarbeitern garantieren wir höchste Qualität und Kundenzufriedenheit.",
+  description_short: "Professionelle Bau- und Sanierungsarbeiten in München und Umgebung.",
+  url: "https://makoko-bau.de",
+  author: "MaKoKo Bau GmbH",
 };
 
 export const SEO = {
@@ -15,7 +15,7 @@ export const SEO = {
   structuredData: {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    inLanguage: "en-US",
+    inLanguage: "de-DE",
     "@id": SITE.url,
     url: SITE.url,
     name: SITE.title,
@@ -30,10 +30,10 @@ export const SEO = {
 };
 
 export const OG = {
-  locale: "en_US",
+  locale: "de_DE",
   type: "website",
   url: SITE.url,
-  title: `${SITE.title}: : Hardware Tools & Construction Services`,
-  description: "Equip your projects with ScrewFast's top-quality hardware tools and expert construction services. Trusted by industry leaders, ScrewFast offers simplicity, affordability, and reliability. Experience the difference with user-centric design and cutting-edge tools. Start exploring now!",
+  title: `${SITE.title}: Holz- und Bautenschutz, Flachdachsanierung, Abrissarbeiten`,
+  description: "MaKoKo Bau - Ihr kompetenter Partner für Holz- und Bautenschutz, Flachdachsanierung und professionelle Abrissarbeiten. Wir bieten erstklassige Qualität und zuverlässigen Service in München und Umgebung.",
   image: ogImageSrc,
 };

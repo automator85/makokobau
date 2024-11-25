@@ -1,29 +1,25 @@
 {
-  "subTitle": "Ask us anything about our brand and products, and get factual responses.",
+  "subTitle": "Hier finden Sie Antworten auf häufig gestellte Fragen zu unseren Dienstleistungen.",
   "faqs": [
     {
-      "question": "What types of tools are included in the Starter Kit?",
-      "answer": "The Starter Kit features essential hand and power tools for diverse DIY projects, including hammers, drills, screwdrivers, and a variety of fasteners. It's a curated selection to help beginners and experienced DIYers alike tackle most home improvement tasks."
+      "question": "Welche Regionen decken Sie mit Ihren Dienstleistungen ab?",
+      "answer": "Wir sind hauptsächlich im Großraum München und Umgebung tätig. Für größere Projekte sind wir auch in anderen Regionen Bayerns verfügbar."
     },
     {
-      "question": "Can I upgrade from the Starter Kit to the Professional Toolbox?",
-      "answer": "Absolutely! You can upgrade to the Professional Toolbox at any time to access a wider range of high-quality tools, enjoy priority customer support, and receive exclusive content. Contact our support team for a seamless transition."
+      "question": "Wie lange dauert eine durchschnittliche Flachdachsanierung?",
+      "answer": "Die Dauer einer Flachdachsanierung hängt von der Größe und dem Zustand des Daches ab. In der Regel dauert eine Sanierung zwischen 3-7 Arbeitstagen. Nach einer Begutachtung können wir Ihnen einen genauen Zeitplan erstellen."
     },
     {
-      "question": "What discounts are available for bulk orders through the Professional Toolbox plan?",
-      "answer": "Professional Toolbox members are entitled to exclusive discounts on bulk orders, the percentage of which may vary depending on the order volume. Get in touch with us to discuss your needs, and we'll provide a tailored discount structure."
+      "question": "Bieten Sie kostenlose Beratung und Kostenvoranschläge an?",
+      "answer": "Ja, wir bieten eine kostenlose Erstberatung und Begutachtung vor Ort an. Danach erhalten Sie einen detaillierten Kostenvoranschlag für die erforderlichen Arbeiten."
     },
     {
-      "question": "What kind of customer support can I expect?",
-      "answer": "All our customers receive dedicated email support. With the Starter Kit, you'll receive our standard support, while the Professional Toolbox plan upgrades you to priority support, meaning faster response times and specialized assistance."
+      "question": "Welche Garantien geben Sie auf Ihre Arbeiten?",
+      "answer": "Wir gewähren auf unsere Arbeiten eine umfassende Garantie von 5 Jahren. Diese deckt sowohl die ausgeführten Arbeiten als auch die verwendeten Materialien ab."
     },
     {
-      "question": "How current are the online resources and tutorials?",
-      "answer": "We regularly update our online resources and tutorials to reflect the latest trends in DIY and construction, as well as introductions to new tools and techniques. Our material aims to be comprehensive and user-friendly for all skill levels."
-    },
-    {
-      "question": "Does ScrewFast offer services for large-scale construction projects?",
-      "answer": "Yes, our Enterprise Solutions are designed for larger companies requiring comprehensive services. We provide consultation, planning, and supply of high-grade tools and materials, as well as staffing solutions for substantial construction needs. Contact us for a customized quote."
+      "question": "Wie läuft ein typisches Abriss-Projekt ab?",
+      "answer": "Zunächst führen wir eine gründliche Bestandsaufnahme durch und erstellen einen detaillierten Projektplan. Wir kümmern uns um alle erforderlichen Genehmigungen und führen den Abriss unter Einhaltung aller Sicherheits- und Umweltvorschriften durch."
     }
   ]
 }
