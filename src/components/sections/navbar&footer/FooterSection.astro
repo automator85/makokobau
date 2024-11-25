@@ -3,19 +3,27 @@
 import FooterSocialLink from "@components/ui/links/FooterSocialLink.astro";
 import EmailFooterInput from "@components/ui/forms/input/EmailFooterInput.astro";
 import enStrings from "@utils/navigation.ts";
-import frStrings from "@utils/fr/navigation.ts";
 import Icon from "@components/ui/icons/Icon.astro";
 import BrandLogo from "@components/BrandLogo.astro";
 import { SITE } from "@data/constants";
 
-// Select the correct translation based on the page's lang prop:
-const strings = Astro.currentLocale === "fr" ? frStrings : enStrings;
+// Use navigation strings
+const strings = enStrings;
 
 // Define the variables that will be used in this component
-const sectionThreeTitle: string = Astro.currentLocale === "fr" ? "Rester à jour" : "Stay up to date";
-const sectionThreeContent: string = Astro.currentLocale === "fr" ? "Restez informé des derniers outils et des offres exclusives." :
-  "Stay updated with the latest tools and exclusive deals.";
-const crafted: string = Astro.currentLocale === "fr" ? "Fabriqué par" : "Crafted by";
+const sectionThreeTitle: string = "Newsletter";
+const sectionThreeContent: string = "Bleiben Sie informiert über unsere neuesten Projekte und Angebote.";
+const crafted: string = "Erstellt von";
+
+interface FooterLink {
+  name: string;
+  url: string;
+}
+
+interface FooterSection {
+  section: string;
+  links: FooterLink[];
+}
 ---
 
 <footer class="w-full bg-neutral-300 dark:bg-neutral-900">
@@ -29,13 +37,13 @@ const crafted: string = Astro.currentLocale === "fr" ? "Fabriqué par" : "Crafte
       </div>
       <!-- An array of links for Product and Company sections -->
       {
-        strings.footerLinks.map((section) => (
+        strings.footerLinks.map((section: FooterSection) => (
           <div class="col-span-1">
             <h3 class="font-bold text-neutral-800 dark:text-neutral-200">
               {section.section}
             </h3>
             <ul class="mt-3 grid space-y-3">
-              {section.links.map((link, index) => (
+              {section.links.map((link: FooterLink) => (
                 <li>
                   <a
                     href={link.url}
@@ -43,11 +51,6 @@ const crafted: string = Astro.currentLocale === "fr" ? "Fabriqué par" : "Crafte
                   >
                     {link.name}
                   </a>
-                  {section.section === "Company" && index === 2 ? (
-                    <span class="ms-1 inline rounded-lg bg-orange-500 px-2 py-1 text-xs font-bold text-neutral-50">
-                      We're hiring!
-                    </span>
-                  ) : null}
                 </li>
               ))}
             </ul>
