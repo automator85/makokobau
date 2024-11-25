@@ -2,6 +2,7 @@
 title: "Erfolgreiche Flachdachsanierung in München-Schwabing"
 description: "Professionelle Sanierung eines 500m² großen Flachdachs"
 author: "MaKoKo Bau Team"
+role: "Projektleitung"
 authorImage: "@images/blog/jacob.avif"
 authorImageAlt: "MaKoKo Bau Teammitglied"
 pubDate: 2024-02-06
