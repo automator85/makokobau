@@ -3,10 +3,10 @@ title: "Fachgerechter Holzschutz an historischem Gebäude in Landshut"
 description: "Denkmalgerechte Holzschutzarbeiten mit modernster Technik"
 author: "MaKoKo Bau Team"
 role: "Holzschutzexperte"
-authorImage: "@images/blog/brad.avif"
+authorImage: "../../../images/blog/brad.avif"
 authorImageAlt: "MaKoKo Bau Experte"
 pubDate: 2024-02-10
-cardImage: "@images/blog/post-2.avif"
+cardImage: "../../../images/blog/post-2.avif"
 cardImageAlt: "Holzschutzarbeiten an historischem Gebälk"
 readTime: 5
 tags: ["Holzschutz", "Denkmalschutz", "Landshut"]

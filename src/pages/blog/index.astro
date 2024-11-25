@@ -1,41 +1,28 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
-import CardBlog from "@components/ui/cards/CardBlog.astro";
-import CardBlogRecent from "@components/ui/cards/CardBlogRecent.astro";
-import CardInsight from "@components/ui/cards/CardInsight.astro";
 import { getCollection } from "astro:content";
 import { SITE } from "@data/constants";
 
 const blogEntries = await getCollection("blog", ({ id }) => id.startsWith("en/"));
-const insightEntries = await getCollection("insights", ({ id }) => id.startsWith("en/"));
-
-const sortedPosts = blogEntries.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
-const mostRecentPost = sortedPosts[0];
-const otherPosts = sortedPosts.slice(1);
-
 const pageTitle = `Referenzen | ${SITE.title}`;
 ---
 <MainLayout title={pageTitle}>
   <div class="mx-auto max-w-7xl px-4 py-16">
     <div class="mx-auto max-w-3xl text-center">
-      <h1 class="text-4xl font-bold mb-8 text-neutral-800 dark:text-white">Unsere Referenzen und Erfolgsgeschichten</h1>
-      <p class="text-lg mb-16 text-neutral-600 dark:text-gray-300">Entdecken Sie unsere erfolgreich abgeschlossenen Projekte im Bereich Holz- und Bautenschutz, Flachdachsanierung und Abrissarbeiten.</p>
+      <h1 class="text-4xl font-bold mb-8 text-neutral-800 dark:text-white">
+        Unsere Referenzen und Erfolgsgeschichten
+      </h1>
     </div>
     
     <div class="space-y-12">
-      {otherPosts.map(post => <CardBlog blogEntry={post} />)}
-    </div>
-
-    {mostRecentPost && <div class="mt-12"><CardBlogRecent blogEntry={mostRecentPost} /></div>}
-
-    <div class="mt-20">
-      <div class="mx-auto max-w-3xl text-center">
-        <h2 class="text-3xl font-bold mb-8 text-neutral-800 dark:text-white">Fachliche Einblicke</h2>
-        <p class="text-lg mb-16 text-neutral-600 dark:text-gray-300">Bleiben Sie auf dem Laufenden über aktuelle Entwicklungen und Trends in der Baubranche mit Expertenwissen von MaKoKo Bau.</p>
-      </div>
-      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {insightEntries.map(insight => <CardInsight insightEntry={insight} />)}
-      </div>
+      {blogEntries.map(entry => (
+        <div class="p-4 border rounded">
+          <h2>{entry.data.title}</h2>
+          <p>{entry.data.description}</p>
+          <p>Author: {entry.data.author}</p>
+          <p>Date: {entry.data.pubDate.toLocaleDateString()}</p>
+        </div>
+      ))}
     </div>
   </div>
 </MainLayout>

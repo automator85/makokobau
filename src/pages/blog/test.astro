@@ -1,12 +1,14 @@
 ---
-import MainLayout from "../../layouts/MainLayout.astro";
-import { SITE } from "@data/constants";
+import { getCollection } from "astro:content";
 
-const title = "Test Page";
+const blogEntries = await getCollection("blog");
 ---
-<MainLayout title={title}>
-  <div>
-    <h1>{title}</h1>
-    <p>Test content</p>
-  </div>
-</MainLayout>
+<html>
+<head>
+  <title>Blog Test</title>
+</head>
+<body>
+  <h1>Blog Entries</h1>
+  <pre>{JSON.stringify(blogEntries, null, 2)}</pre>
+</body>
+</html>

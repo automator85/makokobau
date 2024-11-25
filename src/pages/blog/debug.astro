@@ -1,0 +1,27 @@
+---
+import { getCollection } from "astro:content";
+
+const blogEntries = await getCollection("blog");
+---
+<html>
+<head>
+  <title>Blog Debug</title>
+</head>
+<body>
+  <h1>Blog Entries ({blogEntries.length})</h1>
+  {blogEntries.map(entry => (
+    <div style="margin-bottom: 2rem; border: 1px solid #ccc; padding: 1rem;">
+      <h2>{entry.id}</h2>
+      <pre>{JSON.stringify({
+        slug: entry.slug,
+        data: {
+          title: entry.data.title,
+          description: entry.data.description,
+          pubDate: entry.data.pubDate,
+          author: entry.data.author
+        }
+      }, null, 2)}</pre>
+    </div>
+  ))}
+</body>
+</html>

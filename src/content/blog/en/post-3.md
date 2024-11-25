@@ -3,10 +3,10 @@ title: "Professioneller Rückbau im Augsburger Industriegebiet"
 description: "Komplexe Abrissarbeiten unter höchsten Sicherheitsstandards"
 author: "MaKoKo Bau Team"
 role: "Projektmanagement"
-authorImage: "@images/blog/anna.avif"
+authorImage: "../../../images/blog/anna.avif"
 authorImageAlt: "MaKoKo Bau Projektleiter"
 pubDate: 2024-02-18
-cardImage: "@images/blog/post-3.avif"
+cardImage: "../../../images/blog/post-3.avif"
 cardImageAlt: "Abrissarbeiten im Industriegebiet"
 readTime: 3
 tags: ["Abrissarbeiten", "Augsburg", "Industriebau"]
