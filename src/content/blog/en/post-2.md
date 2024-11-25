@@ -1,20 +1,20 @@
 ---
-title: "Enhancing Safety and Workmanship with ScrewFast Construction Services"
-description: "Quality construction services for lasting results"
-author: "Brad"
-authorImage: "@/images/blog/brad.avif"
-authorImageAlt: "Avatar Description"
+title: "Fachgerechter Holzschutz an historischem Gebäude in Landshut"
+description: "Denkmalgerechte Holzschutzarbeiten mit modernster Technik"
+author: "MaKoKo Bau Team"
+authorImage: "@images/blog/brad.avif"
+authorImageAlt: "MaKoKo Bau Experte"
 pubDate: 2024-02-10
-cardImage: "@/images/blog/post-2.avif"
-cardImageAlt: "Man in black sweatpants using DEWALT circular saw and cutting a wood plank"
+cardImage: "@images/blog/post-2.avif"
+cardImageAlt: "Holzschutzarbeiten an historischem Gebälk"
 readTime: 5
-tags: ["safety", "craftsmanship", "management" ]
+tags: ["Holzschutz", "Denkmalschutz", "Landshut"]
 contents: [
-        "When it comes to construction, safety and quality workmanship are non-negotiable. At ScrewFast, we're proud to offer a range of construction services that prioritize both, ensuring your projects are built to last.",
-        "Our team of skilled craftsmen brings precision and expertise to every job, from minor installations to large-scale structural work. With top-quality tools and materials from our extensive inventory, we guarantee the highest standards of safety and craftsmanship on every project.",
-        "But our commitment to excellence doesn't end there. We also provide thorough project management services to keep your build on track and within budget. From workflow coordination to stakeholder communication, ScrewFast handles the complexities so you can focus on your vision.",
-        "What sets ScrewFast apart is our dedication to ongoing support. We don't just finish the job and walk away—we're here for the long haul. Our maintenance services ensure that your construction remains in optimal condition, providing peace of mind for years to come.",
-        "For larger enterprise clients, we offer custom solutions tailored to your unique challenges. By understanding your specific needs, we engineer strategies aimed at maximizing efficiency and driving your business forward.",
-        "With ScrewFast construction services, you can trust that your projects are in good hands. Experience the difference today and see why so many clients choose ScrewFast for their construction needs."
+        "In der Landshuter Altstadt führten wir ein anspruchsvolles Holzschutzprojekt an einem denkmalgeschützten Gebäude durch. Die besondere Herausforderung bestand darin, die historische Bausubstanz zu bewahren und gleichzeitig einen effektiven Schutz gegen Schädlinge und Witterungseinflüsse zu gewährleisten.",
+        "Nach einer gründlichen Analyse des Holzzustands entwickelten wir ein maßgeschneidertes Behandlungskonzept. Dabei berücksichtigten wir sowohl die strengen Auflagen des Denkmalschutzes als auch die Notwendigkeit eines langfristigen Schutzes der historischen Holzkonstruktion.",
+        "Die Arbeiten umfassten die schonende Reinigung der Holzoberflächen, die Behandlung gegen Holzschädlinge und die Applikation spezieller Schutzmittel. Besonders wichtig war uns dabei die Verwendung von Produkten, die sich harmonisch in das historische Erscheinungsbild einfügen.",
+        "Ein Schwerpunkt lag auf der präventiven Behandlung gegen Holzschädlinge wie den Holzbock und andere holzzerstörende Insekten. Durch den Einsatz modernster Diagnose- und Behandlungsmethoden konnten wir einen umfassenden Schutz gewährleisten, ohne die historische Substanz zu beeinträchtigen.",
+        "Das Projekt zeigt exemplarisch, wie traditionelles Handwerk und moderne Holzschutztechnik optimal kombiniert werden können. Das Ergebnis überzeugt nicht nur optisch, sondern bietet auch einen langfristigen Schutz für die wertvolle historische Bausubstanz.",
+        "Mit diesem Referenzprojekt unterstreichen wir unsere Expertise im Bereich des denkmalgerechten Holzschutzes. Die erfolgreiche Durchführung bestätigt unseren hohen Qualitätsanspruch und unsere Fähigkeit, auch bei komplexen Anforderungen optimale Lösungen zu entwickeln."
 ]
 ---
