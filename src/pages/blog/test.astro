@@ -1,0 +1,12 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import { SITE } from "@data/constants";
+
+const title = "Test Page";
+---
+<MainLayout title={title}>
+  <div>
+    <h1>{title}</h1>
+    <p>Test content</p>
+  </div>
+</MainLayout>

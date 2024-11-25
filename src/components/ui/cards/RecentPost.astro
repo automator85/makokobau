@@ -10,20 +10,26 @@ interface Props {
 }
 
 const { blogEntry, recentBlogLocale = "" } = Astro.props;
-const blogUrl = `/makokobau/blog/${blogEntry.slug.replace(/^en\//, '')}/`;
 ---
+
 <div class="grid gap-8 sm:grid-cols-2 sm:items-center">
   <div class="sm:order-2">
     <div class="relative rounded-lg pt-[50%] sm:pt-[100%]">
-      <Image class="absolute start-0 top-0 size-full rounded-xl object-cover" src={blogEntry.data.cardImage} alt={blogEntry.data.cardImageAlt} draggable={"false"} loading={"eager"} format={"avif"} />
+      <Image
+        class="absolute start-0 top-0 size-full rounded-xl object-cover"
+        src={blogEntry.data.cardImage}
+        alt={blogEntry.data.cardImageAlt}
+        draggable={"false"}
+        loading={"eager"}
+        format={"avif"}
+      />
     </div>
   </div>
   <div class="sm:order-1">
     <h2 class="text-balance text-2xl font-bold tracking-tight text-neutral-800 dark:text-neutral-200 md:text-3xl lg:text-4xl lg:leading-tight xl:text-5xl xl:leading-tight">
-      <a 
-        class="outline-none ring-zinc-500 transition duration-300 hover:text-orange-400 focus-visible:ring dark:text-neutral-300 dark:ring-zinc-200 dark:hover:text-neutral-50 dark:focus:outline-none" 
-        href={blogUrl}
-        data-astro-prefetch
+      <a
+        class="outline-none ring-zinc-500 transition duration-300 hover:text-orange-400 focus-visible:ring dark:text-neutral-300 dark:ring-zinc-200 dark:hover:text-neutral-50 dark:focus:outline-none"
+        href={`/makokobau/blog/${blogEntry.slug.replace(/^en\//, '')}/`}
       >
         {blogEntry.data.description}
       </a>
@@ -31,12 +37,20 @@ const blogUrl = `/makokobau/blog/${blogEntry.slug.replace(/^en\//, '')}/`;
     <div class="mt-6 flex items-center sm:mt-10">
       <AvatarBlogLarge blogEntry={blogEntry} />
       <div class="ms-3 sm:ms-4">
-        <p class="font-bold text-neutral-800 dark:text-neutral-200 sm:mb-1">{blogEntry.data.author}</p>
-        <p class="text-xs text-neutral-500">{blogEntry.data.role}</p>
+        <p class="font-bold text-neutral-800 dark:text-neutral-200 sm:mb-1">
+          {blogEntry.data.author}
+        </p>
+        <p class="text-xs text-neutral-500">
+          {blogEntry.data.role}
+        </p>
       </div>
     </div>
     <div class="mt-5">
-      <PrimaryCTA url={blogUrl} title="Mehr erfahren" data-astro-prefetch />
+      <PrimaryCTA
+        url={`/makokobau/blog/${blogEntry.slug.replace(/^en\//, '')}/`}
+        title="Mehr erfahren"
+        data-astro-prefetch
+      />
     </div>
   </div>
 </div>

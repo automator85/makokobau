@@ -1,121 +1,41 @@
 ---
-// Import necessary components, modules and types
 import MainLayout from "../../layouts/MainLayout.astro";
 import CardBlog from "@components/ui/cards/CardBlog.astro";
 import CardBlogRecent from "@components/ui/cards/CardBlogRecent.astro";
 import CardInsight from "@components/ui/cards/CardInsight.astro";
 import { getCollection } from "astro:content";
-import type { CollectionEntry } from "astro:content";
 import { SITE } from "@data/constants";
 
-// Get all blogs post in English directory
-const blogEntries = await getCollection("blog", ({ id }) => {
-  return id.startsWith("en/");
-});
+const blogEntries = await getCollection("blog", ({ id }) => id.startsWith("en/"));
+const insightEntries = await getCollection("insights", ({ id }) => id.startsWith("en/"));
 
-const insightEntries = await getCollection("insights", ({ id }) => {
-  return id.startsWith("en/");
-});
+const sortedPosts = blogEntries.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const mostRecentPost = sortedPosts[0];
+const otherPosts = sortedPosts.slice(1);
 
-const blogPosts: CollectionEntry<"blog">[] = blogEntries.sort(
-  (a: CollectionEntry<"blog">, b: CollectionEntry<"blog">) =>
-    b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-);
-
-// Get all insights posts
-const insightPosts: CollectionEntry<"insights">[] = insightEntries;
-
-// Safely get the most recent post and other posts
-const mostRecentPost = blogPosts.length > 0 ? blogPosts[0] : null;
-const otherPosts = blogPosts.length > 1 ? blogPosts.slice(1) : [];
-
-// Define variables for page content
-const title: string = "Unsere Referenzen und Erfolgsgeschichten";
-const subTitle: string =
-  "Entdecken Sie unsere erfolgreich abgeschlossenen Projekte im Bereich Holz- und Bautenschutz, Flachdachsanierung und Abrissarbeiten. Erfahren Sie mehr über unsere Expertise und Qualitätsstandards anhand konkreter Beispiele.";
-const secondTitle: string = "Fachliche Einblicke";
-const secondSubTitle: string =
-  "Bleiben Sie auf dem Laufenden über aktuelle Entwicklungen und Trends in der Baubranche mit Expertenwissen von MaKoKo Bau.";
-
-const pageTitle: string = `Referenzen | ${SITE.title}`;
+const pageTitle = `Referenzen | ${SITE.title}`;
 ---
-
-<MainLayout
-  title={pageTitle}
-  structuredData={{
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": "https://makoko-bau.de/blog",
-    url: "https://makoko-bau.de/blog",
-    name: "Referenzen | MaKoKo Bau",
-    description:
-      "Entdecken Sie unsere Referenzprojekte und Erfolgsgeschichten im Bereich Holz- und Bautenschutz, Flachdachsanierung und Abrissarbeiten.",
-    isPartOf: {
-      "@type": "WebSite",
-      url: "https://makoko-bau.de",
-      name: "MaKoKo Bau",
-      description:
-        "Die Ausführung von Holz- und Bautenschutzarbeiten sowie Flachdachsanierungen und Abrissarbeiten.",
-    },
-    inLanguage: "de-DE",
-  }}
->
-  <section
-    class="mx-auto max-w-[85rem] space-y-8 px-4 pt-16 sm:px-6 lg:px-8 2xl:max-w-full"
-  >
-    <!--Page header-->
-    <div class="mx-auto max-w-3xl text-left sm:text-center">
-      <h1
-        class="block text-balance text-4xl font-bold tracking-tight text-neutral-800 dark:text-neutral-200 md:text-5xl lg:text-6xl"
-      >
-        {title}
-      </h1>
-
-      <p
-        class="mt-4 text-pretty text-lg text-neutral-600 dark:text-neutral-400"
-      >
-        {subTitle}
-      </p>
+<MainLayout title={pageTitle}>
+  <div class="mx-auto max-w-7xl px-4 py-16">
+    <div class="mx-auto max-w-3xl text-center">
+      <h1 class="text-4xl font-bold mb-8 text-neutral-800 dark:text-white">Unsere Referenzen und Erfolgsgeschichten</h1>
+      <p class="text-lg mb-16 text-neutral-600 dark:text-gray-300">Entdecken Sie unsere erfolgreich abgeschlossenen Projekte im Bereich Holz- und Bautenschutz, Flachdachsanierung und Abrissarbeiten.</p>
     </div>
-  </section>
+    
+    <div class="space-y-12">
+      {otherPosts.map(post => <CardBlog blogEntry={post} />)}
+    </div>
 
-  {
-    otherPosts.length > 0 && (
-      <section class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full">
-        <div class="grid gap-6 lg:grid-cols-2">
-          {otherPosts.map((blogEntry) => (
-            <CardBlog blogEntry={blogEntry} />
-          ))}
-        </div>
-      </section>
-    )
-  }
+    {mostRecentPost && <div class="mt-12"><CardBlogRecent blogEntry={mostRecentPost} /></div>}
 
-  {
-    mostRecentPost && (
-      <section class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full">
-        <CardBlogRecent blogEntry={mostRecentPost} />
-      </section>
-    )
-  }
-
-  {
-    insightPosts.length > 0 && (
-      <section class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full">
-        <div class="mx-auto mb-10 max-w-2xl text-center lg:mb-14">
-          <h2 class="text-2xl font-bold text-neutral-800 dark:text-neutral-200 md:text-4xl md:leading-tight">
-            {secondTitle}
-          </h2>
-          <p class="mt-1 text-pretty text-neutral-600 dark:text-neutral-400">
-            {secondSubTitle}
-          </p>
-        </div>
-        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {insightPosts.map((insightEntry) => (
-            <CardInsight insightEntry={insightEntry} />
-          ))}
-        </div>
-      </section>
-    )
-  }
+    <div class="mt-20">
+      <div class="mx-auto max-w-3xl text-center">
+        <h2 class="text-3xl font-bold mb-8 text-neutral-800 dark:text-white">Fachliche Einblicke</h2>
+        <p class="text-lg mb-16 text-neutral-600 dark:text-gray-300">Bleiben Sie auf dem Laufenden über aktuelle Entwicklungen und Trends in der Baubranche mit Expertenwissen von MaKoKo Bau.</p>
+      </div>
+      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        {insightEntries.map(insight => <CardInsight insightEntry={insight} />)}
+      </div>
+    </div>
+  </div>
 </MainLayout>
